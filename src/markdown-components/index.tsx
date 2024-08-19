@@ -2,6 +2,8 @@ import type { MarkdownToJSX } from 'markdown-to-jsx'
 
 import { Divider } from '~/components/divider'
 
+import './md.css'
+
 export const markdownComponents: MarkdownToJSX.Overrides = {
   Wip: () => (
     <>
@@ -13,4 +15,8 @@ export const markdownComponents: MarkdownToJSX.Overrides = {
   Demo: () => (
     <div className="rounded-md bg-cyan-400 p-2">This is a demo component</div>
   ),
+
+  Slide: () => {
+    return <div className="ani p-2" />
+  },
 }
