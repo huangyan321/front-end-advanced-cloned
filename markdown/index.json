@@ -1,10 +1,11 @@
 [
   {
     "paths": [
-      "what-this.md"
+      "html-http-web.md",
+      "css.md"
     ],
     "slug": "guide",
-    "title": "开始"
+    "title": "基础篇"
   },
   {
     "paths": [
