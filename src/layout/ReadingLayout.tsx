@@ -4,7 +4,7 @@ import { PageFooter } from '~/components/footer'
 import { MobileHeader } from '~/components/header'
 import { HeaderDrawerContentProvider } from '~/components/header/provider'
 import { ActionAsideContainer } from '~/components/shared/ActionAsideContainer'
-import { AsideDonateButton } from '~/components/shared/AsideDonateButton'
+// import { AsideDonateButton } from '~/components/shared/AsideDonateButton'
 import { BanCopyWrapper } from '~/components/shared/BanCopyWrapper'
 import { TocFAB } from '~/components/toc/TocFAB'
 import { OnlyDesktop } from '~/components/viewport'
@@ -33,7 +33,7 @@ export const ReadingLayout = async ({ children }: PropsWithChildren) => {
               <OnlyDesktop>
                 <ArticleRightAside>
                   <ActionAsideContainer>
-                    <AsideDonateButton />
+                    {/* <AsideDonateButton /> */}
                   </ActionAsideContainer>
                 </ArticleRightAside>
               </OnlyDesktop>

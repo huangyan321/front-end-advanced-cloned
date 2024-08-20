@@ -54,7 +54,6 @@ export const FABBase = typescriptHappyForwardRef(
               'rounded-xl border border-zinc-400/20 shadow-lg backdrop-blur-lg dark:border-zinc-500/30 dark:bg-zinc-800/80 dark:text-zinc-200',
               'bg-zinc-50/80 shadow-lg dark:bg-neutral-900/80',
               'transition-all duration-500 ease-in-out',
-
               className,
             )}
             {...rest}

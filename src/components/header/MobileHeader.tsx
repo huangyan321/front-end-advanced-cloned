@@ -3,7 +3,7 @@
 import { useViewport } from '~/atoms/hooks'
 import { clsxm } from '~/lib/helper'
 
-import { AsideDonateButton } from '../shared/AsideDonateButton'
+// import { AsideDonateButton } from '../shared/AsideDonateButton'
 import { BluredBackground } from './internal/BluredBackground'
 import styles from './internal/grid.module.css'
 import { HeaderLeftButtonArea, HeaderLogoArea } from './internal/HeaderArea'
@@ -32,9 +32,9 @@ export const MobileHeader = () => {
           <HeaderMeta />
         </HeaderLogoArea>
 
-        <div className="flex size-full items-center justify-center">
+        {/* <div className="flex size-full items-center justify-center">
           <AsideDonateButton />
-        </div>
+        </div> */}
       </div>
     </HeaderWithShadow>
   )
