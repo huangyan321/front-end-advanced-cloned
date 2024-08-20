@@ -19,4 +19,12 @@ export const markdownComponents: MarkdownToJSX.Overrides = {
   Slide: () => {
     return <div className="ani p-2" />
   },
+  Parallax: () => {
+    return (
+      <div>
+        <p>Parallax示例：</p>
+        <div className="parallax" />
+      </div>
+    )
+  },
 }

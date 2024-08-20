@@ -1,10 +1,17 @@
 [
   {
     "paths": [
+      "mapping-knowledge-domain.md"
+    ],
+    "slug": "road",
+    "title": "学习路线"
+  },
+  {
+    "paths": [
       "html-http-web.md",
       "css.md"
     ],
-    "slug": "guide",
+    "slug": "base",
     "title": "基础篇"
   },
   {
