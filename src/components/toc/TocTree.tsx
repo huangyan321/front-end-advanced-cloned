@@ -186,15 +186,17 @@ const MemoedItem = memo<{
     if (!$container) return
     const itemInContainerTop = $item.offsetTop
     const halfOfContainerHeight = $container.clientHeight / 2
+    // 滚动到中间
+    $container.scrollTop = itemInContainerTop - halfOfContainerHeight
     // 如果当前元素在容器的上半部分，不滚动
-    if (itemInContainerTop < halfOfContainerHeight) {
-      if ($container.scrollTop < halfOfContainerHeight) {
-        $container.scrollTop = 0
-      }
-    } else {
-      // 如果当前元素在容器的下半部分，滚动到容器中间
-      $container.scrollTop = itemInContainerTop + halfOfContainerHeight
-    }
+    // if (itemInContainerTop < halfOfContainerHeight) {
+    //   if ($container.scrollTop < halfOfContainerHeight) {
+    //     $container.scrollTop = 0
+    //   }
+    // } else {
+    //   // 如果当前元素在容器的下半部分，滚动到容器中间
+    //   $container.scrollTop = itemInContainerTop + halfOfContainerHeight
+    // }
   }, [isActive])
 
   return (
