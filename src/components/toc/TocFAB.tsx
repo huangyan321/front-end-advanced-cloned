@@ -44,7 +44,7 @@ export const TocFAB = () => {
         />
       ),
     })
-  }, [pathname, params, $headings])
+  }, [$headings, present])
 
   if (!$headings?.length) return null
 
