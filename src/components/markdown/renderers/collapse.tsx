@@ -16,7 +16,9 @@ export const MDetails: FC<{ children: ReactNode[] }> = (props) => {
 
   const isInPrint = useIsPrintMode()
   useLayoutEffect(() => {
-    isInPrint && setOpen(true)
+    if (isInPrint) {
+      setOpen(true)
+    }
   }, [isInPrint])
 
   const handleOpen = useCallback(() => {

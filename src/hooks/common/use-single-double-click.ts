@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
 export function useSingleAndDoubleClick(
-  actionSimpleClick: Function,
-  actionDoubleClick: Function,
+  actionSimpleClick: (...args: any[]) => any,
+  actionDoubleClick: (...args: any[]) => any,
   delay = 250,
 ) {
   const [click, setClick] = useState(0)

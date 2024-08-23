@@ -9,7 +9,9 @@
   {
     "paths": [
       "html-http-web.md",
-      "css.md"
+      "css.md",
+      "javascript.md",
+      "webpack.md"
     ],
     "slug": "base",
     "title": "基础篇"

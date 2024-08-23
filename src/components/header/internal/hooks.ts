@@ -66,7 +66,9 @@ export const useSetHeaderMetaInfo = () => {
   }) => {
     jotaiStore.set(headerMetaTitleAtom, title)
     jotaiStore.set(headerMetaDescriptionAtom, description)
-    !!slug && jotaiStore.set(headerMetaSlugAtom, slug)
+    if (slug) {
+      jotaiStore.set(headerMetaSlugAtom, slug)
+    }
   }
 }
 

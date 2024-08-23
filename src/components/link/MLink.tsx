@@ -11,7 +11,7 @@ export const MLink: FC<{
   title?: string
   children?: ReactNode
   text?: string
-}> = memo(({ href, children, title, text }) => {
+}> = memo(({ href, children, title }) => {
   return (
     <FloatPopover
       as="span"

@@ -86,7 +86,7 @@ const ReadIndicatorVertical: Component = ({ className }) => {
     </RootPortal>
   )
 }
-export const ReadIndicatorForMobile: Component<{}> = () => {
+export const ReadIndicatorForMobile: Component<object> = () => {
   const isMobile = useIsMobile()
   if (!isMobile) return null
 

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const DONATE = {
-  // link: 'https://github.com/sponsors/Innei',
-  // qrcode: [
-  //   'https://cdn.jsdelivr.net/gh/Innei/img-bed@master/20191211132347.png',
-  //   'https://cdn.innei.ren/bed/2023/0424213144.png',
-  // ],
+  link: 'https://github.com/sponsors/Innei',
+  qrcode: [
+    'https://cdn.jsdelivr.net/gh/Innei/img-bed@master/20191211132347.png',
+    'https://cdn.innei.ren/bed/2023/0424213144.png',
+  ],
 }
 
 export const CONFIG = {

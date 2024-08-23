@@ -9,7 +9,9 @@ export const useUncontrolledInput = <
 
   useLayoutEffect(() => {
     if (initialValue) {
-      ref.current && (ref.current.value = initialValue)
+      if (ref.current) {
+        ref.current.value = initialValue
+      }
     }
   }, [])
 

@@ -4,7 +4,9 @@ import type { RefObject } from 'react'
 
 function on<T extends Window | Document | HTMLElement | EventTarget>(
   obj: T | null,
-  ...args: Parameters<T['addEventListener']> | [string, Function | null, ...any]
+  ...args:
+    | Parameters<T['addEventListener']>
+    | [string, (...args: any[]) => any | null, ...any]
 ): void {
   if (obj && obj.addEventListener) {
     obj.addEventListener(
@@ -17,7 +19,7 @@ function off<T extends Window | Document | HTMLElement | EventTarget>(
   obj: T | null,
   ...args:
     | Parameters<T['removeEventListener']>
-    | [string, Function | null, ...any]
+    | [string, (...args: any[]) => any | null, ...any]
 ): void {
   if (obj && obj.removeEventListener) {
     obj.removeEventListener(
@@ -40,9 +42,9 @@ const useClickAway = <E extends Event = Event>(
   useEffect(() => {
     const handler = (event: React.MouseEvent) => {
       const { current: el } = ref
-      el &&
-        !el.contains(event.target as any) &&
+      if (el && !el.contains(event.target as any)) {
         savedCallback.current(event as any)
+      }
     }
     for (const eventName of events) {
       on(document, eventName, handler)

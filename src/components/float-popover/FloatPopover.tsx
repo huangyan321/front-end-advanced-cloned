@@ -71,7 +71,7 @@ const PopoverActionContext = createContext<{
 
 export const usePopoverAction = () => useContext(PopoverActionContext)
 
-export const FloatPopover = function FloatPopover<T extends {}>(
+export const FloatPopover = function FloatPopover<T extends object>(
   props: FloatPopoverProps<T>,
 ) {
   const {

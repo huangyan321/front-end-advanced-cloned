@@ -1,7 +1,10 @@
 import { isDev } from '~/lib/env'
 
 const isLoadScriptMap: Record<string, 'loading' | 'loaded'> = {}
-const loadingQueueMap: Record<string, [Function, Function][]> = {}
+const loadingQueueMap: Record<
+  string,
+  [(...args: any[]) => any, (...args: any[]) => any][]
+> = {}
 export function loadScript(url: string) {
   return new Promise((resolve, reject) => {
     const status = isLoadScriptMap[url]
@@ -58,7 +61,9 @@ export function loadStyleSheet(href: string) {
     return {
       $link,
       remove: () => {
-        $link.parentNode && $link.parentNode.removeChild($link)
+        if ($link.parentNode) {
+          $link.parentNode.removeChild($link)
+        }
         cssMap.delete(href)
       },
     }
@@ -79,7 +84,9 @@ export function loadStyleSheet(href: string) {
 
   return {
     remove: () => {
-      $link.parentNode && $link.parentNode.removeChild($link)
+      if ($link.parentNode) {
+        $link.parentNode.removeChild($link)
+      }
       cssMap.delete(href)
     },
     $link,
@@ -93,7 +100,9 @@ export function appendStyle(style: string) {
   return {
     remove: () => {
       if (!$style) return
-      $style.parentNode && $style.parentNode.removeChild($style)
+      if ($style.parentNode) {
+        $style.parentNode.removeChild($style)
+      }
       $style.remove()
       $style = null
     },

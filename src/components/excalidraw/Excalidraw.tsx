@@ -36,7 +36,7 @@ export interface ExcalidrawProps {
 }
 
 export const Excalidraw = forwardRef<
-  {},
+  object,
   Omit<ExcalidrawProps, 'refUrl' | 'patchDiffDelta' | 'data'> & {
     data: string
   }
